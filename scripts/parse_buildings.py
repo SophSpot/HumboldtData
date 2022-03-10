@@ -13,7 +13,7 @@ new_footprints_5 = {'Type': 'FeatureCollection', 'features': []}
 count = 0
 features = footprints.get('features')
 for feature in features:
-    new_feature = {'geometry': feature.get('geometry'), 'properties': {}}
+    new_feature = {"type": "Feature", 'geometry': feature.get('geometry'), 'properties': {}}
     properties = feature.get('properties')
     condition = properties.get('bldg_condi')
     new_feature['bldg_condi'] = condition
