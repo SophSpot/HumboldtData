@@ -13,8 +13,20 @@ function initMap() {
           fillColor: color,
       }
   });
-  
+
+  map.data.addListener('mouseover', function(event) {
+    document.getElementById('issued_date').textContent =
+      event.feature.getProperty('issued_date');
+  document.getElementById('address').textContent =
+      event.feature.getProperty('precinct') || '';
+  document.getElementById('landlord').textContent =
+      event.feature.getProperty('entity_or_person_s_');
+  document.getElementById('violation_type').textContent =
+      event.feature.getProperty('violation_type');
+  });
+
   reloadData();
+
 }
 
 function reloadData() {
