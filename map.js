@@ -21,5 +21,5 @@ function reloadData() {
     map.data.forEach(function(feature) {
         map.data.remove(feature);
     });
-    map.data.loadGeoJson('abandoned.geojson');
+    map.data.loadGeoJson('data/abandoned.geojson');
 }
