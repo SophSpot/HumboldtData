@@ -14,7 +14,7 @@ function initMap() {
       }
   });
 
-  map.data.addListener('mouseover', function(event) {
+  map.data.addListener('click', function(event) {
     document.getElementById('issued_date').textContent =
       event.feature.getProperty('issued_date');
   document.getElementById('address').textContent =
