@@ -33,5 +33,9 @@ function reloadData() {
     map.data.forEach(function(feature) {
         map.data.remove(feature);
     });
-    map.data.loadGeoJson('data/abandoned.geojson');
+    map.data.loadGeoJson('data/footprints_1.geojson');
+    map.data.loadGeoJson('data/footprints_2.geojson');
+    map.data.loadGeoJson('data/footprints_3.geojson');
+    map.data.loadGeoJson('data/footprints_4.geojson');
+    map.data.loadGeoJson('data/footprints_5.geojson');
 }
